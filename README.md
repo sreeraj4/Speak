@@ -44,7 +44,7 @@ flutter run
 
 ## 🛠️ Future Enhancements
 ✅ Add **Dark Mode Support**  
-✅ Add **Several language**
+✅ Add **Several language**  
 ✅ Improve **User Interface design**
 
 ---
