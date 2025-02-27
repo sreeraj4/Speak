@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:talktranslo/provider/translator_provider.dart';
 import 'package:talktranslo/screens/home_screen.dart';
+import 'package:talktranslo/screens/welcome_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => TranslationProvider()),
+    ],
+    child: MyApp(),
+  ),);
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +26,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
