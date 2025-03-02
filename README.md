@@ -6,7 +6,7 @@ TalkTranslo is a **Translator App** based on translator flutter package that pro
 
 ## 🚀 Features
 ✅ **Text Translation** - Text translation from one language to another language.    
-✅ **Voice Translation** - Voice translation from one language to another language.
+✅ **Voice Translation** - Voice translation from one language to another language.   
 ✅ **Flutter-based UI** - Cross-platform support for Android & iOS.  
 ✅ **Error Handling** - Manages API failures with retry mechanisms.  
 
