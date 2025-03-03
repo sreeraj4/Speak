@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:talktranslo/provider/translator_provider.dart';
-import 'package:talktranslo/screens/home_screen.dart';
 import 'package:talktranslo/screens/welcome_screen.dart';
 
 void main() {

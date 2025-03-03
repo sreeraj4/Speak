@@ -41,3 +41,9 @@ final Map<String, String> talklanguageMap = {
   'Telugu':'te-IN',
   'Thai':'th-TH',
 };
+
+List<Map<String, String>> availableVoices = [
+  {"name": "Male", "value": "en-us-x-sfg#male_1-local"},
+  {"name": "Female", "value": "en-us-x-sfg#female_1-local"},
+  {"name": "Robot", "value": "en-us-x-sfg#robot-local"},
+];
