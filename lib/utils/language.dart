@@ -47,3 +47,11 @@ List<Map<String, String>> availableVoices = [
   {"name": "Female", "value": "en-us-x-sfg#female_1-local"},
   {"name": "Robot", "value": "en-us-x-sfg#robot-local"},
 ];
+
+
+final List<Map<String,String>> questionAnswer =[
+{"Q":"How do I translate text?","A":"Simply enter text and press 'Translate' button."},
+{"Q": "How do I enable speech translation","A":"Go to 'Speech' tab and clic the mic button and select the language."},
+  {"Q":"How to hear translated text?","A":"Click on 'Volume Icon' to hear the translated text"},
+  {"Q":"Is there any way to copy translated text?","A":"Yes, there is option to copy translated text to clipboard"}
+];
