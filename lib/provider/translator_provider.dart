@@ -13,9 +13,24 @@ class TranslationProvider with ChangeNotifier {
   String translationLanguage = "kn"; // Default to Kannada
   String generated = '';
   String translated = '';
+  double speechRate = 1.0;
+  double pitch = 1.0;
+  String selectedVoice = "en-us-x-sfg#male_1-local";
 
   void selectLanguage(language){
     selectedLanguage=language;
+    notifyListeners();
+  }
+  void selectSpeedRate(rate){
+    speechRate=rate;
+    notifyListeners();
+  }
+  void selectVoice(voice){
+    selectedVoice=voice;
+    notifyListeners();
+  }
+  void selectPitch(selectedPitch){
+    pitch=selectedPitch;
     notifyListeners();
   }
   void translateLanguage(language){
@@ -35,13 +50,13 @@ class TranslationProvider with ChangeNotifier {
   }
 
   Future<void> speakTranslatedText() async {
-    await _speechService.speakText(translatedController.text, translationLanguage);
+    await _speechService.speakText(translatedController.text, translationLanguage,pitch,speechRate,selectedVoice);
   }
   Future<void> speakSpeechTranslatedText() async {
-    await _speechService.speakText(translated, translationLanguage);
+    await _speechService.speakText(translated, translationLanguage,pitch,speechRate,selectedVoice);
   }
   Future<void> speakInputText() async {
-    await _speechService.speakText(inputController.text, translationLanguage);
+    await _speechService.speakText(inputController.text, translationLanguage,pitch,speechRate,selectedVoice);
   }
   Future<void> toggleListening() async {
     if (!isListening) {

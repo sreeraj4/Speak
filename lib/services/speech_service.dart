@@ -5,10 +5,11 @@ class SpeechService {
   final FlutterTts _flutterTts = FlutterTts();
   final stt.SpeechToText _speech = stt.SpeechToText();
 
-  Future<void> speakText(String text, String language) async {
+  Future<void> speakText(String text, String language,double pitch,double speechRate,String selectedVoice) async {
     await _flutterTts.setLanguage(language);
-    await _flutterTts.setPitch(1.0);
-    await _flutterTts.setSpeechRate(0.5);
+    await _flutterTts.setPitch(pitch);
+    await _flutterTts.setSpeechRate(speechRate);
+    await _flutterTts.setVoice({"name": selectedVoice});
     await _flutterTts.speak(text);
   }
 
