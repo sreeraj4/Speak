@@ -19,25 +19,25 @@ class _SettingScreenState extends State<SettingScreen> {
             leading: Icon(Icons.mic),
             title: Text('Speech setting'),
             trailing: Icon(Icons.more_vert),
-            onTap: (){Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const SpeechSettingScreen()),
-    );},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const SpeechSettingScreen()),
+              );
+            },
           ),
           ListTile(
             leading: Icon(Icons.question_mark),
             title: Text('About and Help'),
             trailing: Icon(Icons.more_vert),
-            onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => AbouthelpScreen()));},
-          ),
-          ListTile(
-            leading: Icon(Icons.train),
-            title: Text('Train'),
-            trailing: Icon(Icons.more_vert),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => AbouthelpScreen()));
+            },
           ),
         ],
       ),
-
     );
   }
 }

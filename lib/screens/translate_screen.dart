@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';import 'package:talktranslo/component/texticon_button.dart';
+import 'package:provider/provider.dart';
+import 'package:talktranslo/component/texticon_button.dart';
 import 'package:talktranslo/utils/language.dart';
 import 'package:talktranslo/component/custom_dropdown.dart';
 import 'package:flutter/services.dart';
-
 import '../provider/translator_provider.dart';
 
 class TranslateScreen extends StatefulWidget {
@@ -14,7 +14,6 @@ class TranslateScreen extends StatefulWidget {
 }
 
 class _TranslateScreenState extends State<TranslateScreen> {
-
   void copyContent(String text) async {
     await Clipboard.setData(ClipboardData(text: text));
     if (!mounted) return;
@@ -27,7 +26,8 @@ class _TranslateScreenState extends State<TranslateScreen> {
   Widget build(BuildContext context) {
     final translationProvider = Provider.of<TranslationProvider>(context);
     return Scaffold(
-      body: Column(
+        body: SingleChildScrollView(
+      child: Column(
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -69,7 +69,8 @@ class _TranslateScreenState extends State<TranslateScreen> {
                       children: [
                         IconButton(
                             onPressed: () {
-                              copyContent(translationProvider.inputController.text);
+                              copyContent(
+                                  translationProvider.inputController.text);
                             },
                             icon: Icon(Icons.copy),
                             iconSize: 20),
@@ -93,7 +94,9 @@ class _TranslateScreenState extends State<TranslateScreen> {
             ),
           ),
           TextIconButton(
-              onPress: (){translationProvider.translateText();},
+              onPress: () {
+                translationProvider.translateText();
+              },
               label: "Translate",
               icon: Icons.translate),
           // ElevatedButton(onPressed: translatedText, child: Text("Translate")),
@@ -113,7 +116,8 @@ class _TranslateScreenState extends State<TranslateScreen> {
                     children: [
                       IconButton(
                           onPressed: () {
-                            copyContent(translationProvider.translatedController.text);
+                            copyContent(
+                                translationProvider.translatedController.text);
                           },
                           icon: Icon(Icons.copy),
                           iconSize: 20),
@@ -144,6 +148,6 @@ class _TranslateScreenState extends State<TranslateScreen> {
           ),
         ],
       ),
-    );
+    ));
   }
 }

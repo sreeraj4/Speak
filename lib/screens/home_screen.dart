@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: Text(
-          'TalkTranslo',
+          'Speaksmart',
           style: TextStyle(color: Colors.white),
         ),
       ),

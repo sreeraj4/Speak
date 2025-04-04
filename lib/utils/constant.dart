@@ -1,2 +1,2 @@
-const HEADING='TalkTranslo';
-const SUBTITLE='A Translator buddy for everyone';
+const HEADING = 'Speaksmart';
+const SUBTITLE = 'A Speak and Translate App';

@@ -1,0 +1,2 @@
+/Users/sreeraj/Documents/Project/talktranslo/android/app/.cxx/Debug/3h5m6d37/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/sreeraj/Documents/Project/talktranslo/android/app/.cxx/Debug/3h5m6d37/armeabi-v7a/CMakeFiles/rebuild_cache.dir
